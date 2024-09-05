@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://bf3rmgyro74wr"]
+
+[ext_resource type="Script" path="res://node.gd" id="1_poooq"]
+
+[node name="Main" type="Node2D"]
+
+[node name="TwitchIntegrationAPI" type="Node" parent="."]
+script = ExtResource("1_poooq")
+
+[node name="OauthValHTTPRequest" type="HTTPRequest" parent="TwitchIntegrationAPI"]
+
+[node name="SubscriptionHTTPRequest" type="HTTPRequest" parent="TwitchIntegrationAPI"]
+
+[node name="Timer" type="Timer" parent="TwitchIntegrationAPI"]
+wait_time = 3600.0
